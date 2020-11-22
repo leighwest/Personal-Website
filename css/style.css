@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     /* highlight every border red */
-    /* border: 1px solid red !important; */
+    /* border: 1px solid red; */
 }
 
 @font-face {
@@ -12,27 +12,29 @@
 
 .container {
     font-family: "Montserrat", sans-serif;
-    width: 100%;
-    height: 100vh;
-    overflow: auto;
+    width: 1100px;
+    margin: 0 auto;
     scroll-snap-type: y mandatory;
 }
 
 
 section {
-    height: 100vh;
     scroll-snap-align: start;
     position: relative;
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 3em;
     font-weight: bold;
     padding-bottom: 20px;
 }
 
+h2 {
+    font-size: 3em;
+}
 
-h2  {
+
+h3  {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -50,53 +52,28 @@ header {
 
 
 header a {
-    /* not sure if I should have this as flex or inline-flex */
-    display: inline-flex;
-    min-height: 75px;
-    width: 12.5%;
-    min-width: 100px;
-    justify-content: center;
-    /* center links vertically */
-    align-items: center;
     font-family: "Montserrat";
-    margin-top: 15px;
-    margin-bottom: 15px;
     text-decoration: none;
-    transition-property: background-color;
-    transition-duration: 500ms;
-}
-
-header a:hover {
-    background-color: azure;
 }
 
 .greeting-main {
     display: flex;
-    margin: 50px;
-    padding-left: 50px;
+    padding-top: 5%;
 }
 
 .greeting-text {
-    margin-top:50px;
     width: 50%;
     min-width: 50%;
-    height: 300px;
 }
 
 .greeting-image img {
     width: 80%;
-    height: 80%;
     margin-left: 120px;
 }
 
-/* header span {
-    width:50%;
-    display:block;
-} */
-
 .signature {
     padding: 25px;
-    padding-left: 50px;
+    padding-left: 0px;
     width: 50%;
     font-size: 35px;
     padding-right:100px;
@@ -105,7 +82,6 @@ header a:hover {
 
 .signature span {
     display: inline-block;
-    /* width: 100px; */
     color: gray;
 
 }
@@ -143,15 +119,19 @@ header a:hover {
     cursor: pointer;
     /* -webkit-transition: all .3s ease-in-out 0s; */
     /* transition: all .3s ease-in-out 0s; */
-    transition-property: background-color;
-    transition-duration: 500ms;
+    /* transition-property: background-color; */
+    /* transition-duration: 500ms; */
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
 
 }
 
 .greeting-button1 a:hover, .greeting-button2 a:hover {
     background-color: white;
     color: #55198b;
-    
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-7px);    
 }
 
 .greeting-button1 a {
@@ -163,3 +143,98 @@ p {
     margin-bottom: 20px;
 }
 
+
+/* ################# */
+
+#skills {
+    display: flex;
+    padding-top: 10%;
+    justify-content: space-between;
+}
+
+.skills-image, .skills-text {
+    width: 47%;
+}
+
+.skills-image img {
+    width: 100%;
+}
+
+.skills-languages {
+    display: flex;
+    margin-top: 30px;
+}
+
+.skills-languages svg {
+    width: 100%;
+}
+
+.skill-language-item {
+    display: flex;
+    flex-direction: column;
+    width: 12%;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.skills-languages p {
+    display: inline-block;
+    margin-top: 6px;
+    font-weight: 900;
+}
+
+nav {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    border-bottom: 1px solid transparent;
+    padding: 20px 10px;
+    transition: all .2s ease-in-out;
+}
+
+nav li:hover {
+    border-bottom: 1px solid #55198b;
+}
+
+/* ################### */
+
+#projects {
+    display: flex;
+    padding-top: 10%;
+    justify-content: space-between;
+}
+
+.projects-image, .projects-text {
+    width: 47%;
+}
+
+.skills-image img {
+    width: 90%;
+}
+
+
+/* ####################### */
+
+#contact {
+    display: flex;
+    padding: 10% 0;
+    justify-content: space-between;
+}
+
+.contact-image, .contact-text {
+    width: 47%;
+}
+
+.contact-image img {
+    width: 90%;
+}
+}
