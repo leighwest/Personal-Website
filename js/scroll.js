@@ -13,8 +13,8 @@ $(function(){
 
         $(document).on("scroll", function() {
             var currentScrollPos = $(document).scrollTop();
-            $(".arrow-2").css("opacity", 1-currentScrollPos/400);
-            var opacity = 1-currentScrollPos/400;
+            var opacity = 1-currentScrollPos/300;
+            $(".arrow-2").css(`opacity`, `${opacity}`);
             // not sure how to target pulsing circle 
             console.log(opacity);
             $(".arrow-1").css(`background`, `rgba(100, 91, 235, ${opacity})`);
