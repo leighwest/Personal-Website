@@ -350,6 +350,7 @@
   
   .project-dotpoint p {
     margin-top: 0;
+    margin-left: 3px;
   }
   
   .portfolio-content {
@@ -369,12 +370,17 @@
     width: 50%;
     position: absolute;
     left: 25%;
-    top: 7%;
+    top: 5%;
   }
   
   .slick-prev:before,
   .slick-next:before {
     color: #55198b !important;
+  }
+
+  .projects-text a {
+    padding: 6px 18px;
+    margin-right: 30px;
   }
   
   /* ####################### */
