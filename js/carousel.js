@@ -10,6 +10,7 @@ $(document).ready(function(){
       dotsClass: 'dots-container slick-dots'
   });
 
-  // AOS.init({
-  // });
+  // AOS initialised after carousel loaded to resolve bug where contact me section doesn't render 
+  AOS.init({
+  });
 });
